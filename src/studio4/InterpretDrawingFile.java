@@ -19,6 +19,19 @@ public class InterpretDrawingFile {
 		chooser.showOpenDialog(null);
 		File f = new File(chooser.getSelectedFile().getPath());
 		Scanner in = new Scanner(f); //making Scanner with a File
-		
+
+		String ShapeType = in.next();
+		int R = in.nextInt();
+		int G = in.nextInt();
+		int B = in.nextInt();
+		boolean fill = in.nextBoolean();
+		double parameterOne = in.nextDouble();
+		double parameterTwo = in.nextDouble();
+		double parameterThree = in.nextDouble();
+		double parameterFour = in.nextDouble();
+
+		StdDraw.setPenColor(R,G,B);
+		StdDraw.filledRectangle(parameterOne,parameterTwo,parameterThree,parameterFour);
+
 	}
 }
